@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "CMS for composing professional texts",
   "main": "package.json",
-  "author": "Tord Standnes <tord.standnes@iterate.no>",
+  "author": "Tord Standnes <tord.standnes@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
