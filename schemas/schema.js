@@ -4,7 +4,8 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import { experience } from "./experience";
 import { languageString } from "./languageString";
 import { languageText } from "./languageText";
-import { technologyAtom } from "./technologyAtom";
+import { atomicSkill } from "./atomicSkill";
+import { requirement } from "./requirement";
 
 export default createSchema({
   name: "Composer",
@@ -12,6 +13,7 @@ export default createSchema({
     experience,
     languageString,
     languageText,
-    technologyAtom,
+    atomicSkill,
+    requirement,
   ]),
 });
