@@ -6,9 +6,9 @@ export const experience = {
   title: "Experience",
   fields: [
     {
-      name: "experience_title",
+      name: "title",
       type: "languageString",
-      title: "Experience Title",
+      title: "Title",
       description:
         "The title of the experience. Should be descriptive of the experience.",
       validation: (Rule) => Rule.required(),
@@ -73,10 +73,17 @@ export const experience = {
     //date from to
     //location
     //team size
+    {
+      name: "technologies",
+      type: "array",
+      title: "Technologies",
+      description: "The technologies used in the experience.",
+      of: [{ type: "reference", to: { type: "technologyAtom" } }],
+    },
   ],
   preview: {
     select: {
-      title: `experience_title.${baseLanguage.id}`,
+      title: `title.${baseLanguage.id}`,
     },
   },
 };
