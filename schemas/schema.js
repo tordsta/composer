@@ -7,6 +7,7 @@ import { languageText } from "./languageText";
 import { atomicSkill } from "./atomicSkill";
 import { requirement } from "./requirement";
 import { proofOfWork } from "./proofOfWork";
+import { recommendation } from "./recommendation";
 
 export default createSchema({
   name: "Composer",
@@ -17,5 +18,6 @@ export default createSchema({
     atomicSkill,
     requirement,
     proofOfWork,
+    recommendation,
   ]),
 });
