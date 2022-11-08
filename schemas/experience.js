@@ -20,14 +20,12 @@ export const experience = {
       title: "The Assignment",
       description:
         "Description of the assignment or problem to be solved. Beskriver behovet til kunden og hvordan teamet jobbet for å løse dette behovet. Kan også kort beskrive kunde og kundens forretningsområdet om det er saklig. Formålet med denne delen av teksten og bygge legitimitet og seriøsitet. At det ikke var et vimsete oppdrag, men et seriøst behov av en seriøs kunde. Her er det altså viktig å spille opp kundens seriøsitet. ",
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "solution",
       type: "languageText",
       title: "The Solution",
       description: "Description of what was made or achieved or delivered.",
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "process",
@@ -42,7 +40,6 @@ export const experience = {
       title: "Individual Contribution",
       description:
         "What was your individual contribution to the project? Responsibilities, work done, problems solved. What parts did you work on and how much of the solution did you make? I mitt bidrag skal jeg rettferdiggjøre min innsatts og plass i prosjektet, uten å tråkke på team medlemmer. Jeg vise kunnskap og kompetanse ved å beskrive bruk av teknologi og løsninger på problemer. Samt reflektere over prioriteringer i prosjektet. Kvantifisering  er et sterkt virkemiddel her, eks arbeidsmengden, stillingsprosent, timer, ting jeg har gjort/løst alene. Forankring av, samt bygging av legitimitet og authoritet er et viktig mål her. ",
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "customer_introduction",
