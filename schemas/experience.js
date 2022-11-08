@@ -25,6 +25,12 @@ export const experience = {
         "The title of the experience. Should be descriptive of the experience. CV med prosjekt beskrivelser sendes med hvert tilbud. At kriteriebesvarelsene refererer tilbake til spesifikke prosjekter er en måte å legitimisere erfaringene. Det er viktig at hvert prosjekt beskrivers i sin helhet på en måte som komplimenterer og utfyller kriteriebesvarelsene. Hvordan legitimere et prosjekt? Ambisjonen og skala på prosjektet, aktører involvert, pengebruken, antall mennesker og deres status/erfaring. 							",
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: "summary",
+      type: "languageText",
+      title: "Summary",
+      description: "A short summary of the experience.",
+    },
 
     //Metadata about the experience
     {
@@ -67,10 +73,12 @@ export const experience = {
           description: "Type of experience.",
           options: {
             list: [
-              { title: "Client", value: "client" },
-              { title: "Emplooye", value: "employee" },
+              { title: "Contract", value: "contract" },
+              { title: "Employed", value: "employed" },
               { title: "Startup", value: "startup" },
               { title: "Education", value: "education" },
+              { title: "Hobby", value: "hobby" },
+              { title: "Volunteer", value: "volunteer" },
             ],
           },
         },
@@ -127,7 +135,7 @@ export const experience = {
       title: "Individual Contribution",
       fieldset: "textualDescriptions",
       description:
-        "What was your individual contribution to the project? Responsibilities, work done, problems solved. What parts did you work on and how much of the solution did you make? I mitt bidrag skal jeg rettferdiggjøre min innsatts og plass i prosjektet, uten å tråkke på team medlemmer. Jeg vise kunnskap og kompetanse ved å beskrive bruk av teknologi og løsninger på problemer. Samt reflektere over prioriteringer i prosjektet. Kvantifisering  er et sterkt virkemiddel her, eks arbeidsmengden, stillingsprosent, timer, ting jeg har gjort/løst alene. Forankring av, samt bygging av legitimitet og authoritet er et viktig mål her. ",
+        "What was your individual contribution to the project? Responsibilities, achievements, work done, problems solved. What parts did you work on and how much of the solution did you make? I mitt bidrag skal jeg rettferdiggjøre min innsatts og plass i prosjektet, uten å tråkke på team medlemmer. Jeg vise kunnskap og kompetanse ved å beskrive bruk av teknologi og løsninger på problemer. Samt reflektere over prioriteringer i prosjektet. Kvantifisering  er et sterkt virkemiddel her, eks arbeidsmengden, stillingsprosent, timer, ting jeg har gjort/løst alene. Forankring av, samt bygging av legitimitet og authoritet er et viktig mål her. ",
     },
     {
       name: "customer_introduction",

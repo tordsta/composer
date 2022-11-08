@@ -14,6 +14,18 @@ export const atomicSkill = {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: "subtitle",
+      type: "languageString",
+      title: "Subtitle",
+    },
+    {
+      name: "link",
+      type: "url",
+      title: "Link",
+      description:
+        "A link to a website that describes the technology or skill.",
+    },
+    {
       name: "competency",
       type: "languageText",
       title: "My Competency",
