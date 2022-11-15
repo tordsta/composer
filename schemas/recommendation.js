@@ -32,7 +32,7 @@ export const recommendation = {
       type: "text",
       title: "Plain Text",
       description:
-        "The content of the recommendation. Do not fill in if you have a file. ",
+        "The content of the recommendation. Do not fill in if you have a file.",
     },
     {
       name: "files",
