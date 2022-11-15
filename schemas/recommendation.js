@@ -21,11 +21,18 @@ export const recommendation = {
       description: "Type of recommendation.",
       options: {
         list: [
-          { title: "testimonial", value: "testimonial" },
-          { title: "letter", value: "letter" },
-          { title: "contactable", value: "contactable" },
+          { title: "Testimonial", value: "testimonial" },
+          { title: "Letter", value: "letter" },
+          { title: "Contactable", value: "contactable" },
         ],
       },
+    },
+    {
+      name: "plainText",
+      type: "text",
+      title: "Plain Text",
+      description:
+        "The content of the recommendation. Do not fill in if you have a file.",
     },
     {
       name: "files",
