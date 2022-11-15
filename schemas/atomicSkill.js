@@ -65,11 +65,11 @@ export const atomicSkill = {
     },
     {
       name: "proofOfWork",
-      type: "reference",
-      to: [{ type: "proofOfWork" }],
-      title: "Proof of Work",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "proofOfWork" }] }],
       description:
         "Proof i have worked with this technology. Poenget med proof-of-work er å løfte tilbudet til et nytt nivå, det skal skille seg ut og det skal imponere leseren. Poeng scoren på vurderingen av tilbudet blir bedre med bruk av proof-of-work. Det skal også fjerne en hver vil om at min kompetanse er lav eller middelmådig.",
+      title: "Proof of Work",
     },
   ],
   preview: {
