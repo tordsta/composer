@@ -175,12 +175,12 @@ export const experience = {
   ],
   orderings: [
     {
-      title: "End Date, Lastest First",
+      title: "End Date, Latest First",
       name: "endDateDesc",
       by: [{ field: "end_date", direction: "desc" }],
     },
     {
-      title: "Start Date, Lastest First",
+      title: "Start Date, Latest First",
       name: "startDateDesc",
       by: [{ field: "start_date", direction: "desc" }],
     },
