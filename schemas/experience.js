@@ -11,8 +11,13 @@ export const experience = {
       options: { collapsible: true, collapsed: true },
     },
     {
-      name: "textualDescriptions",
-      title: "Textual descriptions",
+      name: "publicDescriptions",
+      title: "Public descriptions",
+      options: { collapsible: true, collapsed: false },
+    },
+    {
+      name: "restrictedDescriptions",
+      title: "Restricted descriptions",
       options: { collapsible: true, collapsed: false },
     },
   ],
@@ -22,14 +27,8 @@ export const experience = {
       type: "languageString",
       title: "Title",
       description:
-        "The title of the experience. Should be descriptive of the experience. CV med prosjekt beskrivelser sendes med hvert tilbud. At kriteriebesvarelsene refererer tilbake til spesifikke prosjekter er en måte å legitimisere erfaringene. Det er viktig at hvert prosjekt beskrivers i sin helhet på en måte som komplimenterer og utfyller kriteriebesvarelsene. Hvordan legitimere et prosjekt? Ambisjonen og skala på prosjektet, aktører involvert, pengebruken, antall mennesker og deres status/erfaring. 							",
+        "The title of the experience. Should be descriptive of the experience.",
       validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "summary",
-      type: "languageText",
-      title: "Summary",
-      description: "A short summary of the experience.",
     },
 
     //Metadata about the experience
@@ -63,8 +62,8 @@ export const experience = {
         {
           name: "name",
           type: "string",
-          title: "Name",
-          description: "The name of the fasilitator/benefitor.",
+          title: "Stakeholder Name",
+          description: "The name of the primary stakeholder.",
         },
         {
           name: "type",
@@ -89,14 +88,15 @@ export const experience = {
       type: "string",
       title: "Role",
       fieldset: "metadata",
-      description:
-        "Your role in the experience. Fullstack, frontend, backend, designer, project manager, etc.",
+      description: "Your official position, title or role in the experience.",
     },
     {
       name: "workload",
       type: "string",
       title: "Workload",
       fieldset: "metadata",
+      description:
+        "Describe the workload. In hours, full-time, days, money, etc.",
     },
     {
       name: "teamSize",
@@ -105,76 +105,64 @@ export const experience = {
       fieldset: "metadata",
     },
 
-    //Several types of textual descriptions of the experience
+    //Public descriptions
     {
-      name: "assignment",
+      name: "summary",
       type: "languageText",
-      title: "The Assignment",
-      fieldset: "textualDescriptions",
+      title: "Summary",
+      fieldset: "publicDescriptions",
       description:
-        "Description of the assignment or problem to be solved. Beskriver behovet til kunden og hvordan teamet jobbet for å løse dette behovet. Kan også kort beskrive kunde og kundens forretningsområdet om det er saklig. Formålet med denne delen av teksten og bygge legitimitet og seriøsitet. At det ikke var et vimsete oppdrag, men et seriøst behov av en seriøs kunde. Her er det altså viktig å spille opp kundens seriøsitet. ",
+        "A short description. Describe the context of the experience. Give an overview of main goals and solutions.",
     },
     {
-      name: "solution",
+      name: "stakeholders",
       type: "languageText",
-      title: "The Solution",
-      fieldset: "textualDescriptions",
-      description: "Description of what was made or achieved or delivered.",
-    },
-    {
-      name: "process",
-      type: "languageText",
-      title: "The Process",
-      fieldset: "textualDescriptions",
+      title: "Stakeholders",
+      fieldset: "publicDescriptions",
       description:
-        "A description of methodologies used in the process of solving the assignment. Can be team processes or task processes. Why where they used? What was the benefit?",
+        "A description of the stakeholder that sets them in a good light. Potentially their needs, goals, vision and mission as well.",
     },
     {
-      name: "individual_contribution",
+      name: "teamAchievements",
+      type: "languageText",
+      title: "Team Achievements",
+      fieldset: "publicDescriptions",
+      description:
+        "Description of what was made, achieved or delivered to the stakeholder.",
+    },
+
+    //Restricted descriptions
+    {
+      name: "individualContribution",
       type: "languageText",
       title: "Individual Contribution",
-      fieldset: "textualDescriptions",
+      fieldset: "restrictedDescriptions",
       description:
-        "What was your individual contribution to the project? Responsibilities, achievements, work done, problems solved. What parts did you work on and how much of the solution did you make? I mitt bidrag skal jeg rettferdiggjøre min innsatts og plass i prosjektet, uten å tråkke på team medlemmer. Jeg vise kunnskap og kompetanse ved å beskrive bruk av teknologi og løsninger på problemer. Samt reflektere over prioriteringer i prosjektet. Kvantifisering  er et sterkt virkemiddel her, eks arbeidsmengden, stillingsprosent, timer, ting jeg har gjort/løst alene. Forankring av, samt bygging av legitimitet og authoritet er et viktig mål her. ",
-    },
-    {
-      name: "customer_introduction",
-      type: "languageText",
-      title: "Customer Introduction",
-      fieldset: "textualDescriptions",
-      description:
-        "A short description of the customer, their needs, and their goals.",
+        "What was your individual contribution to the project? Responsibilities, achievements, problems solved. What discussion and decision's did you make and way in on? How did you prioritize your work, justify your answer? Did anyone validate your work?",
     },
     {
       name: "learning",
       type: "languageText",
       title: "Learning",
-      fieldset: "textualDescriptions",
+      fieldset: "restrictedDescriptions",
       description:
-        "What was learned from that experience? What professional development was achieved or improved upon? Why? Who was involved?",
+        "What was learned from that experience? Key takeaways. What professional development was achieved or improved upon? How? Who was involved?",
     },
     {
-      name: "story",
+      name: "process",
       type: "languageText",
-      title: "The Story",
-      fieldset: "textualDescriptions",
+      title: "The Cooperation Process",
+      fieldset: "restrictedDescriptions",
       description:
-        "The story of the experience. Chronological events. Non-technical. Can be extensive and include personal notes or show emotions. This texts use case is when showing a human side of the experience. Teksten som beskriver dette oppdraget på nettsiden min. Teksten på nettsiden min skal fortelle en histore ikke skryte så grådig. Skal være et mykt inntrykk og beskrvelse som skal fremmet kunden like mye som meg selv.  Oppgaven her er å fortelle en historie om oppdraget og fremme kunde og meg selv i en myk kontektst. ",
+        "A description of the process of working as a team. What tools, structures and methods were used deliberately used. Show/describe cooperation skills. If not a team expreience, disregard this field.",
     },
 
-    //References to other documents
-    {
-      name: "technologies",
-      type: "array",
-      title: "Technologies",
-      description: "The technologies used in the experience.",
-      of: [{ type: "reference", to: { type: "atomicSkill" } }],
-    },
+    //Document references
     {
       name: "proofOfWork",
       type: "array",
       title: "Proof of Work",
-      description: "Proof of work done in the experience.",
+      description: "Proof of work of the experience.",
       of: [{ type: "reference", to: { type: "proofOfWork" } }],
     },
     {
